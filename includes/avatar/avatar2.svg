@@ -1,0 +1,56 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Skin Gradient -->
+    <radialGradient id="skinGradient" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FFD4C1"/>
+      <stop offset="100%" stop-color="#E8A598"/>
+    </radialGradient>
+
+    <!-- Hair Gradient -->
+    <linearGradient id="hairGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5D3214"/>
+      <stop offset="100%" stop-color="#3B1F0D"/>
+    </linearGradient>
+
+    <!-- Body Gradient -->
+    <linearGradient id="dressGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5B041"/>
+      <stop offset="100%" stop-color="#D68910"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="50" fill="#E74C3C"/>
+
+  <!-- Face with gradient -->
+  <circle cx="50" cy="45" r="25" fill="url(#skinGradient)"/>
+
+  <!-- Hair with gradient -->
+  <path d="M25 35 Q25 15 50 18 Q75 15 75 35 Q75 45 70 50 Q65 45 60 40 Q55 35 50 35 Q45 35 40 40 Q35 45 30 50 Q25 45 25 35" fill="url(#hairGradient)"/>
+
+  <!-- Eyes with shine -->
+  <circle cx="42" cy="40" r="2.5" fill="#2C3E50"/>
+  <circle cx="58" cy="40" r="2.5" fill="#2C3E50"/>
+  <circle cx="41.5" cy="39.5" r="0.6" fill="#fff"/>
+  <circle cx="57.5" cy="39.5" r="0.6" fill="#fff"/>
+
+  <!-- Nose with shading -->
+  <ellipse cx="50" cy="47" rx="1.2" ry="2.5" fill="#D69387"/>
+
+  <!-- Mouth (3D styled) -->
+  <path d="M45 52 Q50 57 55 52 Q50 55 45 52" fill="#C0392B"/>
+
+  <!-- Eyelashes -->
+  <path d="M40 38 L41 36" stroke="#2C3E50" stroke-width="0.5"/>
+  <path d="M44 38 L45 36" stroke="#2C3E50" stroke-width="0.5"/>
+  <path d="M56 38 L55 36" stroke="#2C3E50" stroke-width="0.5"/>
+  <path d="M60 38 L59 36" stroke="#2C3E50" stroke-width="0.5"/>
+
+  <!-- Dress with gradient -->
+  <path d="M25 75 Q25 65 35 65 L65 65 Q75 65 75 75 L75 100 L25 100 Z" fill="url(#dressGradient)"/>
+
+  <!-- Dress pattern -->
+  <circle cx="40" cy="80" r="2" fill="#CA6F1E"/>
+  <circle cx="60" cy="85" r="2" fill="#CA6F1E"/>
+  <circle cx="45" cy="90" r="2" fill="#CA6F1E"/>
+</svg>

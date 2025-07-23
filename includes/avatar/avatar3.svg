@@ -1,0 +1,67 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Skin Gradient -->
+    <radialGradient id="skinGrad" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#FDBCB4"/>
+      <stop offset="100%" stop-color="#E89A8B"/>
+    </radialGradient>
+
+    <!-- Shirt Gradient -->
+    <linearGradient id="shirtGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5DADE2"/>
+      <stop offset="100%" stop-color="#2E86C1"/>
+    </linearGradient>
+
+    <!-- Tie Gradient -->
+    <linearGradient id="tieGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E74C3C"/>
+      <stop offset="100%" stop-color="#922B21"/>
+    </linearGradient>
+
+    <!-- Soft Shadow -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#000000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="50" fill="#ECEFF1"/>
+
+  <!-- Face -->
+  <circle cx="50" cy="45" r="25" fill="url(#skinGrad)" filter="url(#softShadow)"/>
+
+  <!-- Hair (Receding) -->
+  <path d="M30 30 Q35 20 45 22 Q50 18 55 22 Q65 20 70 30 Q75 35 70 40 Q65 35 60 32 Q55 30 50 30 Q45 30 40 32 Q35 35 30 40 Q25 35 30 30" fill="#566573" filter="url(#softShadow)"/>
+
+  <!-- Bald Spot -->
+  <ellipse cx="50" cy="25" rx="8" ry="5" fill="#F5B7B1"/>
+
+  <!-- Eyes -->
+  <circle cx="42" cy="40" r="2" fill="#2C3E50"/>
+  <circle cx="58" cy="40" r="2" fill="#2C3E50"/>
+
+  <!-- Crow's Feet -->
+  <path d="M38 38 L35 36 M38 40 L35 40 M62 38 L65 36 M62 40 L65 40" stroke="#BFC9CA" stroke-width="0.5"/>
+
+  <!-- Glasses -->
+  <circle cx="42" cy="40" r="6" fill="none" stroke="#34495E" stroke-width="1.2"/>
+  <circle cx="58" cy="40" r="6" fill="none" stroke="#34495E" stroke-width="1.2"/>
+  <path d="M48 40 L52 40" stroke="#34495E" stroke-width="1.2"/>
+
+  <!-- Nose (Shaded) -->
+  <ellipse cx="50" cy="47" rx="1.6" ry="2.5" fill="#D98880"/>
+
+  <!-- Mustache (Layered) -->
+  <ellipse cx="50" cy="50" rx="6" ry="1.5" fill="#AAB7B8"/>
+  <ellipse cx="50" cy="51" rx="5.5" ry="1.2" fill="#839192" opacity="0.6"/>
+
+  <!-- Mouth -->
+  <path d="M46 52 Q50 55 54 52" stroke="#5D6D7E" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Shirt -->
+  <path d="M25 75 Q25 65 35 65 L65 65 Q75 65 75 75 L75 100 L25 100 Z" fill="url(#shirtGrad)" filter="url(#softShadow)"/>
+
+  <!-- Tie -->
+  <path d="M47 65 L47 90 L50 95 L53 90 L53 65 Z" fill="url(#tieGrad)" filter="url(#softShadow)"/>
+  <path d="M47 65 L53 65 L50 70 Z" fill="#922B21"/>
+</svg>

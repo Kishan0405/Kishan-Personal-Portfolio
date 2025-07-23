@@ -1,0 +1,72 @@
+<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Radial gradient for face to simulate depth -->
+    <radialGradient id="faceGradient" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#FDCBC2"/>
+      <stop offset="100%" stop-color="#E8A598"/>
+    </radialGradient>
+
+    <!-- Linear gradient for background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A569BD"/>
+      <stop offset="100%" stop-color="#7D3C98"/>
+    </linearGradient>
+
+    <!-- Hair gradient -->
+    <linearGradient id="hairGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D5D8DC"/>
+      <stop offset="100%" stop-color="#95A5A6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="50" fill="url(#bgGradient)" />
+
+  <!-- Face -->
+  <circle cx="50" cy="45" r="25" fill="url(#faceGradient)" />
+
+  <!-- Gray Hair -->
+  <path d="M25 35 Q25 20 50 22 Q75 20 75 35 Q75 40 70 42 Q65 38 60 35 Q55 32 50 32 Q45 32 40 35 Q35 38 30 42 Q25 40 25 35"
+        fill="url(#hairGradient)" />
+
+  <!-- Hair texture -->
+  <path d="M30 28 Q35 25 40 28" stroke="#7F8C8D" stroke-width="0.6" fill="none"/>
+  <path d="M50 25 Q55 22 60 25" stroke="#7F8C8D" stroke-width="0.6" fill="none"/>
+  <path d="M60 28 Q65 25 70 28" stroke="#7F8C8D" stroke-width="0.6" fill="none"/>
+
+  <!-- Eyes with highlight -->
+  <circle cx="42" cy="40" r="2.5" fill="#2C3E50"/>
+  <circle cx="58" cy="40" r="2.5" fill="#2C3E50"/>
+  <circle cx="41.5" cy="39.5" r="0.5" fill="#ECF0F1"/>
+  <circle cx="57.5" cy="39.5" r="0.5" fill="#ECF0F1"/>
+
+  <!-- Glasses -->
+  <rect x="36" y="37" width="12" height="6" rx="3" fill="none" stroke="#7F8C8D" stroke-width="1"/>
+  <rect x="52" y="37" width="12" height="6" rx="3" fill="none" stroke="#7F8C8D" stroke-width="1"/>
+  <path d="M48 40 L52 40" stroke="#7F8C8D" stroke-width="1"/>
+
+  <!-- Smile lines -->
+  <path d="M38 45 Q40 47 42 45" stroke="#AAB7B8" stroke-width="0.5" fill="none"/>
+  <path d="M58 45 Q60 47 62 45" stroke="#AAB7B8" stroke-width="0.5" fill="none"/>
+
+  <!-- Nose -->
+  <ellipse cx="50" cy="47" rx="1.4" ry="2.5" fill="#DFA18D"/>
+
+  <!-- Mouth -->
+  <path d="M46 52 Q50 55 54 52" stroke="#E74C3C" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Cardigan -->
+  <path d="M25 75 Q25 65 35 65 L65 65 Q75 65 75 75 L75 100 L25 100 Z" fill="#8E44AD"/>
+  <path d="M50 65 L50 100" stroke="#6C3483" stroke-width="1"/>
+
+  <!-- Buttons -->
+  <circle cx="50" cy="72" r="1.5" fill="#ECF0F1"/>
+  <circle cx="50" cy="80" r="1.5" fill="#ECF0F1"/>
+  <circle cx="50" cy="88" r="1.5" fill="#ECF0F1"/>
+
+  <!-- Pearl necklace -->
+  <circle cx="45" cy="67" r="1" fill="#FDFEFE"/>
+  <circle cx="48" cy="66" r="1" fill="#FDFEFE"/>
+  <circle cx="52" cy="66" r="1" fill="#FDFEFE"/>
+  <circle cx="55" cy="67" r="1" fill="#FDFEFE"/>
+</svg>
