@@ -1,0 +1,39 @@
+# Enable URL rewriting
+RewriteEngine On
+RewriteBase /kishan_personal_portfolio/
+
+# Force HTTPS (optional for localhost; comment out if not using HTTPS locally)
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Exclude specific directories (like js) from URL rewriting
+RewriteCond %{REQUEST_URI} ^/kishan_personal_portfolio/js/ [NC]
+RewriteRule ^ - [L]
+
+# Redirect external requests from .php to clean URL (e.g., home.php -> home)
+RewriteCond %{THE_REQUEST} \s/+kishan_personal_portfolio/(.+)\.php[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Internally rewrite clean URLs to .php files if they exist
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.+)$ $1.php [L]
+
+# Maintain DirectoryIndex from default configuration
+DirectoryIndex index.php index.html index.htm index2.html
+
+# Custom error page for 404
+ErrorDocument 403 /404.php
+ErrorDocument 404 /404.php
+ErrorDocument 500 /404.php
+
+# ---------------------------------------------------------
+# CACHE CONTROL - Disable/Expire Cache every 1 second
+# ---------------------------------------------------------
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|svg|js|css|swf|html|php)$">
+        Header set Cache-Control "no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "0"
+    </FilesMatch>
+</IfModule>
