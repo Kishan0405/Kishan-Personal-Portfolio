@@ -1,20 +1,16 @@
+<?php include_once 'header.php'; ?>
 <?php
-include_once 'header.php'; // Assuming header.php contains common head elements or navigation.
-
-// Override default values for the projects page
 $pageTitle = "Kishan Raj - My Projects";
 $pageDescription = "Explore a collection of web development projects by Kishan Raj, including personal portfolios, AI applications, e-commerce platforms, and more.";
-// Keep userProfilePicturePath as it might be used in header.php or for consistency
 if (!isset($userProfilePicturePath)) {
     $userProfilePicturePath = "https://via.placeholder.com/256/00d4ff/00b8e6?text=KR";
 }
-
-// Array of projects for easy management
 $projects = [
     [
         'title' => 'My New Personal Portfolio',
         'description' => 'My latest personal website involves the use of PHP, HTML, CSS, JS and Tailwind. The project showcases all my projects, internships and contact. All the contents of the website are the same as the details listed in LinkedIn profile. This project is a great example of my skills in web development and design using my creative logic skills and Vibe-Coding (Mainly Generative AI based coding).',
         'link' => '/',
+        'view_code' => 'https://github.com/Kishan0405/Kishan-Personal-Portfolio',
         'images' => [
             'includes/project_image/image_13.png',
             'includes/project_image/image_14.png',
@@ -26,6 +22,7 @@ $projects = [
         'title' => 'QuizzletMaster Search',
         'description' => 'Gareeb logon ka search engine QuizzletMaster Search will be a dedicated, high-performance search engine built for the QuizzletMaster platform. This engine service enhances user experience by allowing quick and efficient searching of quizzes and topics, demonstrating my skills in building specialized, functional tools. Search Clicks are limited for 500 Clicks is much than enough for a single user.',
         'link' => 'http://search.quizzletmaster.in/',
+        'view_code' => '',
         'images' => [
             'includes/project_image/image_10.png',
             'includes/project_image/image_11.png',
@@ -37,6 +34,7 @@ $projects = [
         'title' => 'QuizzletMaster',
         'description' => 'QuizzletMaster is an innovative online quiz platform proudly developed in India by Kishan Raj. QuizzletMaster always provide a seamless, engaging and interactive quiz experience for users worldwide, whether you are here to learn, challenge others or create your own educational content.',
         'link' => 'http://quizzletmaster.in/',
+        'view_code' => '',
         'images' => [
             'includes/project_image/image_7.png',
             'includes/project_image/image_8.png',
@@ -48,6 +46,7 @@ $projects = [
         'title' => 'Special BOX UI E-Commerce Platform',
         'description' => 'A limited functional e-commerce platform designed using PHP, HTML, CSS and JS. This project shows the importance of UI/UX design in e-commerce,focusing on user experience and product presentation. It includes features like product listing, categories, cart, wishlist and buy feature. Admin can add, delete or customize the orders etc. This project is hosted on a free hosting solution. The project is incomplete and later on in upcomming future I will make it the part of QuizzletMaster platform.',
         'link' => 'https://specialboxuionline.wuaze.com/specialboxuionline/home.php',
+        'view_code' => '',
         'images' => [
             'includes/project_image/image_4.png',
             'includes/project_image/image_5.png',
@@ -59,6 +58,7 @@ $projects = [
         'title' => 'My Previous First designed Personal Website',
         'description' => 'One of my first major personal website, this website served as a foundational learning experience using HTML, CSS, JS and PHP in addition with using Generative AI as coding helper. This personal website helped me to understand the web technologies and free hosting solutions.',
         'link' => 'https://specialboxuionline.wuaze.com/?i=1',
+        'view_code' => '',
         'images' => [
             'includes/project_image/image_1.png',
             'includes/project_image/image_2.png',
@@ -321,7 +321,6 @@ $projects = [
 
 <body class="bg-bg-primary text-text-primary">
     <main class="main-content-wrapper flex-1 px-2 py-8 mt-0">
-        <!-- Projects Header Section -->
         <section class="max-w-6xl mx-auto mb-16 mt-0 text-center" data-aos="fade-up">
             <h1 class="text-4xl md:text-5xl font-bold gradient-text mb-4 font-space">My Projects</h1>
             <p class="text-[var(--text-secondary)] text-lg max-w-4xl mx-auto">
@@ -331,14 +330,11 @@ $projects = [
                 Each project represents a step and experience in vibe-coding helps as a web developer.
             </p>
         </section>
-
-        <!-- Projects Grid Section -->
         <section class="max-w-7xl mx-auto">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <?php foreach ($projects as $index => $project) : ?>
                     <div class="project-card" data-aos="fade-up" data-aos-delay="<?php echo ($index % 2) * 100; ?>">
                         <div class="p-4">
-                            <!-- Image Gallery -->
                             <div class="mb-4 overflow-hidden rounded-lg">
                                 <a href="<?php echo htmlspecialchars($project['link']); ?>" target="_blank" rel="noopener noreferrer">
                                     <img src="<?php echo $project['images'][0]; ?>" alt="<?php echo htmlspecialchars($project['title']); ?> main preview" class="w-full h-64 object-cover transition-transform duration-300 hover:scale-105">
@@ -349,8 +345,6 @@ $projects = [
                                 <img src="<?php echo $project['images'][2]; ?>" alt="<?php echo htmlspecialchars($project['title']); ?> thumbnail 2" class="w-full h-32 object-cover rounded-md border border-[var(--border)]">
                             </div>
                         </div>
-
-                        <!-- Card Content -->
                         <div class="px-6 pb-6 flex-grow flex flex-col">
                             <h3 class="text-2xl font-bold mb-2 font-space"><?php echo htmlspecialchars($project['title']); ?></h3>
                             <div class="flex flex-wrap gap-2 mb-4">
@@ -365,16 +359,21 @@ $projects = [
                                 <a href="<?php echo htmlspecialchars($project['link']); ?>" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full sm:w-auto justify-center">
                                     <i class="fas fa-external-link-alt"></i> Live Demo
                                 </a>
-                                <a href="#" class="btn btn-secondary w-full sm:w-auto justify-center opacity-50 cursor-not-allowed" onclick="event.preventDefault(); alert('Code repository is private.');">
-                                    <i class="fab fa-github"></i> View Code
-                                </a>
+                                <?php if (!empty($project['view_code'])) : ?>
+                                    <a href="<?php echo htmlspecialchars($project['view_code']); ?>" target="_blank" rel="noopener noreferrer" class="btn btn-secondary w-full sm:w-auto justify-center">
+                                        <i class="fab fa-github"></i> View Code
+                                    </a>
+                                <?php else : ?>
+                                    <button class="btn btn-secondary w-full sm:w-auto justify-center opacity-50 cursor-not-allowed" onclick="event.preventDefault(); alert('Code repository is private.');">
+                                        <i class="fab fa-github"></i> View Code
+                                    </button>
+                                <?php endif; ?>
                             </div>
                         </div>
                     </div>
                 <?php endforeach; ?>
             </div>
         </section>
-
         <footer class="text-center py-8 mt-20 border-t border-[var(--border)]">
             <div class="max-w-6xl mx-auto">
                 <p class="text-[var(--text-secondary)] mb-4">
@@ -387,12 +386,12 @@ $projects = [
                     Designed and Developed with
                 </p>
                 <p class="text-[var(--text-tertiary)] text-sm">
-                        <i class="fab fa-php text-indigo-600"></i> PHP
-                        <i class="fab fa-html5 text-orange-600"></i> HTML
-                        <i class="fa-brands fa-css3-alt text-blue-500"></i> CSS
-                        <img src="https://tailwindcss.com/favicons/favicon-32x32.png" alt="Tailwind" class="w-4 h-4 inline"> Tailwind
-                        <i class="fab fa-js-square text-yellow-500"></i> JS
-                        <i class="fab fa-google text-red-500"></i> Google
+                    <i class="fab fa-php text-indigo-600"></i> PHP
+                    <i class="fab fa-html5 text-orange-600"></i> HTML
+                    <i class="fa-brands fa-css3-alt text-blue-500"></i> CSS
+                    <img src="https://tailwindcss.com/favicons/favicon-32x32.png" alt="Tailwind" class="w-4 h-4 inline"> Tailwind
+                    <i class="fab fa-js-square text-yellow-500"></i> JS
+                    <i class="fab fa-google text-red-500"></i> Google
                 </p>
             </div>
         </footer>
@@ -400,7 +399,6 @@ $projects = [
     <button id="themeToggle" class="fixed bottom-20 right-6 w-12 h-12 bg-[var(--surface)] hover:bg-[var(--surface-hover)] border border-[var(--border)] text-[var(--text-primary)] rounded-full shadow-lg transition-all duration-300 flex items-center justify-center z-50 group">
         <i class="fas fa-moon group-hover:scale-110 transition-transform"></i>
     </button>
-
     <button id="scrollTopBtn" onclick="scrollToTop()" class="fixed bottom-6 right-6 w-12 h-12 bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white rounded-full shadow-lg opacity-0 translate-y-4 pointer-events-none transition-all duration-300 flex items-center justify-center z-50 group">
         <i class="fas fa-arrow-up group-hover:scale-110 transition-transform"></i>
     </button>

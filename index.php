@@ -785,7 +785,7 @@ if (!isset($userProfilePicturePath)) {
                 <div class="card card-animated-border glass-hover group">
                     <div class="relative overflow-hidden rounded-lg mb-4">
                         <div class="h-48 bg-gradient-to-br from-[var(--accent)]/20 to-[var(--accent-secondary)]/20 flex items-center justify-center">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8ZGFzaGJvYXJkLGNvZGUsd2Vic2l0ZXx8fHx8fDE3MjE2Nzc3Nzk&ixlib=rb-4.0.3&q=80&w=1080" alt="My New Personal Portfolio" class="w-full h-full object-cover">
+                            <img src="includes/project_image/image_13.png" alt="My New Personal Portfolio" class="w-full h-full object-cover">
                         </div>
                         <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
@@ -800,7 +800,9 @@ if (!isset($userProfilePicturePath)) {
                         <a href="index.php" class="btn btn-primary text-sm py-2 px-4" target="_blank" rel="noopener noreferrer">
                             <i class="fas fa-external-link-alt text-xs"></i> View Project
                         </a>
-                        <a href="#" class="btn btn-secondary text-sm py-2 px-4 opacity-50 cursor-not-allowed" onclick="event.preventDefault(); alert('Code repository is private.');">
+                        <a href="https://github.com/Kishan0405/Kishan-Personal-Portfolio"
+                            class="btn btn-secondary text-sm py-2 px-4 inline-flex items-center gap-2"
+                            target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github text-xs"></i> Code
                         </a>
                     </div>
