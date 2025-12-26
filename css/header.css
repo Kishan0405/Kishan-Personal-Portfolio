@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap');
+
+:root {
+    --bg-primary: #F8F9FA;
+    --bg-secondary: #FFFFFF;
+    --glass-bg: rgba(255, 255, 255, 0.65);
+    --hover-bg: #f1f3f4;
+    --surface-hover: #f1f3f4;
+
+    --text-primary: #202124;
+    --text-light: #5F6368;
+
+    --glass-border: rgba(255, 255, 255, 0.9);
+    --border: #DFE1E5;
+
+    --primary-blue: #4255FF;
+    --accent-purple: #8A2BE2;
+}
+
+html.dark {
+    --bg-primary: #0D1117;
+    --bg-secondary: #161B22;
+    --glass-bg: rgba(22, 27, 34, 0.7);
+    --hover-bg: #21262d;
+    --surface-hover: #21262d;
+
+    --text-primary: #E6EDF3;
+    --text-light: #8B949E;
+
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --border: #30363d;
+
+    --primary-blue: #58A6FF;
+    --accent-purple: #A052E8;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-header-gradient {
+    background: linear-gradient(45deg, var(--primary-blue), var(--accent-purple));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
