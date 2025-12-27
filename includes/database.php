@@ -1,6 +1,6 @@
 <?php
 $host    = 'localhost';
-$db      = 'kishan_personal';
+$db      = 'quizzletmaster';
 $user    = 'root';
 $pass    = '';
 $charset = 'utf8mb4';
