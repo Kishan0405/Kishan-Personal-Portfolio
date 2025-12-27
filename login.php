@@ -89,16 +89,12 @@ ob_end_flush();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
-    <style>
-        
-    </style>
 </head>
 
 <body>
     <main class="main-content-wrapper flex-1 flex items-center justify-center px-4 py-8" data-aos="fade-up">
-        <div class="w-full animate-slide-in-fade">
-            <div class="glass rounded-2xl p-8 shadow-2xl">
+        <div class="animate-slide-in-fade">
+            <div class="glass rounded-2xl p-8 shadow-2xl lg:w-[600px]">
                 <header class="text-center mb-8">
                     <h1 class="text-3xl font-bold gradient-text tracking-tight font-space">Welcome Back!</h1>
                     <p class="text-base text-[var(--text-secondary)] mt-2">Log in with your QuizzletMaster account.</p>
@@ -154,7 +150,6 @@ ob_end_flush();
     </main>
 
     <script>
-        // Page-specific AOS initialization
         AOS.init({
             duration: 600,
             once: true,
@@ -166,7 +161,6 @@ ob_end_flush();
 </html>
 
 <?php
-// Include the standard footer
 include_once 'footer.php';
-ob_end_flush(); // Send all buffered output to the browser
+ob_end_flush();
 ?>

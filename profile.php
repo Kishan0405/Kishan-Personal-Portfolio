@@ -220,11 +220,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'quizzletmaster.in@gmail.com';
-                    $mail->Password = 'woza wlom zcnl zswx';
+                    $mail->Username = ''; // ADD EMAIL AFTER 2 FACTOR AUTHENTICATION ENABLED
+                    $mail->Password = ''; // ADD APP PASSWORD HERE
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
-                    $mail->setFrom('quizzletmaster.in@gmail.com', 'QuizzletMaster');
+                    $mail->setFrom('', 'QuizzletMaster'); // ADD SENDER EMAIL
                     $mail->addAddress($email_to_send_otp);
                     $mail->isHTML(true);
 
@@ -402,7 +402,6 @@ $xp_progress = $xp_needed_for_level > 0 ? round(($xp_in_current_level / $xp_need
 if ($xp_progress > 100) $xp_progress = 100;
 include 'header.php';
 ?>
-<link rel="stylesheet" href="css/search.css">
 <style>
     :root {
         --text-dark: #333;
@@ -772,5 +771,6 @@ include 'header.php';
     });
 </script>
 <?php
+require 'footer.php';
 ob_end_flush();
 ?>

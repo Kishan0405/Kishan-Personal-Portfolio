@@ -4,7 +4,6 @@ include_once 'header.php';
 $pageTitle = "Contact Kishan Raj - Biotechnology Engineer & Web Developer";
 $pageDescription = "Get in touch with Kishan Raj for collaborations, project inquiries, or any questions related to web development, biotechnology, and AI solutions.";
 
-// Fallback for profile picture, although header.php should handle this
 if (!isset($userProfilePicturePath)) {
     $userProfilePicturePath = "https://via.placeholder.com/256/00d4ff/00b8e6?text=KR";
 }

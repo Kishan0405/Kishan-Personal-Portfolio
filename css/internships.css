@@ -220,8 +220,6 @@ textarea:focus {
     outline: none;
 }
 
-
-
 .hero-pattern {
     position: absolute;
     top: 0;
@@ -297,12 +295,6 @@ textarea:focus {
         padding-top: 0;
     }
 
-    .card,
-    .card-animated-border {
-        /* padding: 1.25rem; */
-        /* Handled by inner divs */
-    }
-
     .btn {
         padding: 0.625rem 1.5rem;
         font-size: 0.8rem;
@@ -320,7 +312,6 @@ textarea:focus {
     z-index: 1000;
 }
 
-/* Reduced motion for accessibility and performance */
 @media (prefers-reduced-motion: reduce) {
 
     *,

@@ -1,11 +1,9 @@
 <?php
 include_once 'header.php';
 
-// Set page-specific variables
 $pageTitle = "Kishan Raj - Internship Experience";
 $pageDescription = "A collection of my internship reports, presentations, and photo galleries showcasing my work and experiences during my internship period.";
 
-// Internship data
 $internshipItems = [
     [
         'title' => 'Spatiotemporal Analysis of Urban Expansion Using NDBI from Satellite Imagery',
@@ -106,7 +104,6 @@ $internshipItems = [
 
                                 <?php if (!empty($item['images'])) : ?>
                                     <?php
-                                    // Create a JSON string of images for the JS function
                                     $imagesJson = htmlspecialchars(json_encode($item['images']), ENT_QUOTES, 'UTF-8');
                                     ?>
                                     <?php if (count($item['images']) > 1) : ?>
@@ -174,18 +171,14 @@ $internshipItems = [
     </div>
 
     <script>
-        // --- AOS (Animate on Scroll) Logic ---
         AOS.init({
             duration: 600,
             easing: 'ease-out-cubic',
             once: true,
             offset: 50,
-            disable: window.innerWidth < 768 // Disable on mobile for performance
+            disable: window.innerWidth < 768
         });
 
-
-
-        // --- Lightbox Logic (NEWLY ADDED) ---
         let currentLightboxImages = [];
         let currentLightboxIndex = 0;
         const lightboxModal = document.getElementById('lightboxModal');
@@ -199,14 +192,14 @@ $internshipItems = [
             currentLightboxImages = images;
             currentLightboxIndex = index;
             lightboxModal.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
             showImage(currentLightboxIndex);
             document.addEventListener('keydown', handleLightboxKeydown);
         }
 
         function closeLightbox() {
             lightboxModal.classList.remove('active');
-            document.body.style.overflow = ''; // Restore scrolling
+            document.body.style.overflow = '';
             document.removeEventListener('keydown', handleLightboxKeydown);
         }
 
@@ -220,7 +213,6 @@ $internshipItems = [
                 lightboxSpinner.classList.remove('show');
                 lightboxImage.style.opacity = 1;
             };
-            // Handle potential image load errors
             img.onerror = () => {
                 lightboxImage.src = 'https://via.placeholder.com/600x400/FF4757/FFFFFF?text=Image+Not+Found';
                 lightboxSpinner.classList.remove('show');
@@ -229,8 +221,6 @@ $internshipItems = [
             img.src = currentLightboxImages[index];
 
             lightboxCaption.textContent = `Image ${index + 1} of ${currentLightboxImages.length}`;
-
-            // Update button states
             lightboxPrev.disabled = index === 0;
             lightboxNext.disabled = index === currentLightboxImages.length - 1;
         }
@@ -259,7 +249,6 @@ $internshipItems = [
             }
         }
 
-        // --- Theme Toggle Logic (from index.php) ---
         const themeToggle = document.getElementById('themeToggle');
         if (themeToggle) {
             themeToggle.addEventListener('click', () => {
@@ -273,4 +262,6 @@ $internshipItems = [
 
 </html>
 
-<?php include_once 'footer.php'; ?>
+<?php
+include_once 'footer.php';
+?>

@@ -450,4 +450,6 @@ $pageDescription = "Learn more about Kishan Raj, a Biotechnology Engineer & Web 
 </body>
 
 </html>
-<?php include_once 'footer.php'; ?>
+<?php
+include_once 'footer.php';
+?>

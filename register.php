@@ -1,13 +1,14 @@
 <?php
-ob_start(); // Start output buffering at the very beginning
+ob_start();
 
-// --- PHP LOGIC FIRST ---
 require_once 'includes/database.php';
 require_once 'includes/functions.php';
 require_once 'includes/auth.php';
 require_once 'includes/PHPMailer/src/Exception.php';
 require_once 'includes/PHPMailer/src/PHPMailer.php';
 require_once 'includes/PHPMailer/src/SMTP.php';
+include_once 'header.php';
+
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -29,6 +30,81 @@ $available_avatars = [
     'includes/avatar/avatar3.svg',
     'includes/avatar/avatar4.svg',
     'includes/avatar/avatar5.svg',
+    'includes/avatar/avatar6.png',
+    'includes/avatar/avatar7.png',
+    'includes/avatar/avatar8.png',
+    'includes/avatar/avatar9.png',
+    'includes/avatar/avatar10.png',
+    'includes/avatar/avatar11.png',
+    'includes/avatar/avatar12.png',
+    'includes/avatar/avatar13.png',
+    'includes/avatar/avatar14.png',
+    'includes/avatar/avatar15.png',
+    'includes/avatar/avatar16.png',
+    'includes/avatar/avatar17.png',
+    'includes/avatar/avatar18.png',
+    'includes/avatar/avatar19.png',
+    'includes/avatar/avatar20.png',
+    'includes/avatar/avatar21.png',
+    'includes/avatar/avatar22.png',
+    'includes/avatar/avatar23.png',
+    'includes/avatar/avatar24.png',
+    'includes/avatar/avatar25.png',
+    'includes/avatar/avatar26.png',
+    'includes/avatar/avatar27.png',
+    'includes/avatar/avatar28.png',
+    'includes/avatar/avatar29.png',
+    'includes/avatar/avatar30.png',
+    'includes/avatar/avatar31.png',
+    'includes/avatar/avatar32.png',
+    'includes/avatar/avatar33.png',
+    'includes/avatar/avatar34.png',
+    'includes/avatar/avatar35.png',
+    'includes/avatar/avatar36.png',
+    'includes/avatar/avatar37.png',
+    'includes/avatar/avatar38.png',
+    'includes/avatar/avatar39.png',
+    'includes/avatar/avatar40.png',
+    'includes/avatar/avatar41.png',
+    'includes/avatar/avatar42.png',
+    'includes/avatar/avatar43.png',
+    'includes/avatar/avatar44.png',
+    'includes/avatar/avatar46.png',
+    'includes/avatar/avatar47.png',
+    'includes/avatar/avatar48.png',
+    'includes/avatar/avatar49.png',
+    'includes/avatar/avatar50.png',
+    'includes/avatar/avatar51.png',
+    'includes/avatar/avatar52.png',
+    'includes/avatar/avatar53.png',
+    'includes/avatar/avatar54.png',
+    'includes/avatar/avatar55.png',
+    'includes/avatar/avatar56.png',
+    'includes/avatar/avatar57.png',
+    'includes/avatar/avatar58.png',
+    'includes/avatar/avatar59.png',
+    'includes/avatar/avatar60.png',
+    'includes/avatar/avatar61.png',
+    'includes/avatar/avatar62.png',
+    'includes/avatar/avatar63.png',
+    'includes/avatar/avatar64.png',
+    'includes/avatar/avatar65.png',
+    'includes/avatar/avatar66.png',
+    'includes/avatar/avatar67.png',
+    'includes/avatar/avatar68.png',
+    'includes/avatar/avatar69.png',
+    'includes/avatar/avatar70.png',
+    'includes/avatar/avatar71.png',
+    'includes/avatar/avatar72.png',
+    'includes/avatar/avatar73.png',
+    'includes/avatar/avatar74.png',
+    'includes/avatar/avatar75.png',
+    'includes/avatar/avatar76.png',
+    'includes/avatar/avatar77.png',
+    'includes/avatar/avatar78.png',
+    'includes/avatar/avatar79.png',
+    'includes/avatar/avatar80.png'
+
 ];
 $redirect_after_toast = false;
 $redirect_url = '';
@@ -215,11 +291,11 @@ HTML;
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'quizzletmaster.in@gmail.com';
-                    $mail->Password = 'woza wlom zcnl zswx';
+                    $mail->Username = ''; // ADD EMAIL AFTER 2 FACTOR AUTHENTICATION ENABLED
+                    $mail->Password = ''; // ADD APP PASSWORD HERE
                     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
                     $mail->Port = 587;
-                    $mail->setFrom('quizzletmaster.in@gmail.com', 'QuizzletMaster');
+                    $mail->setFrom('', 'QuizzletMaster'); // ADD SENDER EMAIL
                     $mail->addAddress($email_to_send);
                     $mail->isHTML(true);
                     $mail->Subject = 'Your QuizzletMaster Registration OTP';
@@ -355,7 +431,6 @@ if (isset($_SESSION['selected_avatar_temp'])) {
     $selected_avatar = $_SESSION['selected_avatar_temp'];
 }
 
-// --- Page variables for the <head> ---
 $pageTitle = "Register – Kishan Raj Portfolio";
 $pageDescription = "Create a new account for the QuizzletMaster Platform to start creating and taking quizzes.";
 ?>
@@ -367,7 +442,6 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     <meta name="description" content="<?php echo htmlspecialchars($pageDescription); ?>">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="css/auth.css">
     <link rel="icon" type="image/svg+xml" href="includes/kishanraj.svg">
@@ -382,12 +456,6 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
 </head>
 
 <body>
-
-    <?php
-    // Include the standard header UI (nav, sidebar)
-    include_once 'header.php';
-    ?>
-
     <main class="main-content-wrapper flex-1 flex items-center justify-center px-4 py-8" data-aos="fade-up">
         <div id="toastContainer" class="toast-container"></div>
         <div class="w-full animate-slide-in-fade">
@@ -497,12 +565,12 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
                     return;
                 }
                 const toast = document.createElement('div');
-                toast.className = `toast ${type} animate__animated animate__fadeInUp`; // Use animate.css
+                toast.className = `toast ${type} animate__animated animate__fadeInUp`;
                 toast.textContent = message;
 
                 toastContainer.appendChild(toast);
 
-                const duration = 5000; // Total time
+                const duration = 5000;
 
                 if (redirectUrl) {
                     setTimeout(() => {
@@ -514,7 +582,7 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
                         }, {
                             once: true
                         });
-                    }, delay - 1000); // Start fade out 1s before redirect
+                    }, delay - 1000);
                 } else {
                     setTimeout(() => {
                         toast.classList.remove('animate__fadeInUp');
@@ -524,7 +592,7 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
                         }, {
                             once: true
                         });
-                    }, duration - 1000); // Start fade out 1s before end
+                    }, duration - 1000);
                 }
             }
 
@@ -574,11 +642,9 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
                 const submitterName = event.submitter ? event.submitter.name : null;
 
                 if (submitterName === 'send_otp') {
-                    // Let the form submit to the PHP logic for sending OTP
                     return;
                 }
 
-                // --- Full Registration Validation ---
                 const passwordPattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/;
                 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -599,7 +665,6 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
                     isValid = false;
                 }
 
-                // Check if OTP field is visible and required
                 if (otpInput && otpInput.offsetParent !== null && submitterName === 'register') {
                     if (!otpInput.value.trim()) {
                         showToast('Please enter the OTP.', 'error');
@@ -616,7 +681,7 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
                 togglePassword.addEventListener('click', function() {
                     const type = passwordInput.type === 'password' ? 'text' : 'password';
                     passwordInput.type = type;
-                    confirmPasswordInput.type = type; // Toggle both
+                    confirmPasswordInput.type = type;
                     this.querySelector('i').classList.toggle('fa-eye');
                     this.querySelector('i').classList.toggle('fa-eye-slash');
                 });
@@ -647,7 +712,7 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
 
                 prevButton.addEventListener('click', () => {
                     const itemWidth = avatarContainer.querySelector('.avatar-item')?.offsetWidth || 0;
-                    const scrollAmount = itemWidth + 16; // 16px is space-x-4
+                    const scrollAmount = itemWidth + 16;
                     avatarContainer.scrollBy({
                         left: -scrollAmount,
                         behavior: 'smooth'
@@ -673,6 +738,6 @@ $pageDescription = "Create a new account for the QuizzletMaster Platform to star
 
 </html>
 <?php
-// Send all buffered output to the browser
 ob_end_flush();
+require 'footer.php';
 ?>
