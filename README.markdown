@@ -302,6 +302,7 @@
 
 
 <p align="center"><strong>Designed and Developed by Kishan Raj</strong></p>
-<p align="center"><strong>© 2025</strong></p>
+<p align="center"><strong>2025</strong></p>
+
 
 </hr>
