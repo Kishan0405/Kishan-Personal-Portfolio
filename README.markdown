@@ -1,4 +1,4 @@
-<h1 align="center">🌟 Kishan Raj's Personal Portfolio 🚀</h1>
+<h1 align="center">Kishan Raj's Personal Portfolio</h1>
 
 <p>
    Welcome to the <strong>GitHub repository</strong> of my <strong>Personal Portfolio Website</strong>!<br>
@@ -9,7 +9,7 @@
 <p>
    This portfolio showcases my skills in web development — blending my love for biotechnology with modern web
    technologies
-   and <strong>Generative AI</strong> to create something truly unique. 🌱💻
+   and <strong>Generative AI</strong> to create something truly unique.
 </p>
 
 <p>
@@ -23,13 +23,13 @@
 </p>
 
 <p>
-   Let’s dive into the <strong>code, creativity and vibes</strong>! 🎨✨
+   Let’s dive into the <strong>code, creativity and vibes</strong>!
 </p>
 
 
 <hr>
 
-<h2>🌍 About the Project</h2>
+<h2>About the Project</h2>
 
 <p>
    This repository gives you the source code of my <strong>Personal Portfolio Website</strong>, a dynamic and responsive
@@ -38,7 +38,7 @@
    you're here to explore my work or set up the project locally, this guide has you covered!
 </p>
 
-<h3>🎯 Project Highlights</h3>
+<h3>Project Highlights</h3>
 <ul>
    <li><strong>Modern UI/UX</strong>: Clean, responsive design with a focus on user experience.</li>
    <li><strong>Dynamic Functionality</strong>: Powered by PHP for server-side logic and interactivity.</li>
@@ -50,7 +50,7 @@
 
 <hr>
 
-<h2>🛠️ Tech Stack</h2>
+<h2>Tech Stack</h2>
 
 <p>
    The portfolio is built using a blend of front-end and back-end technologies, ensuring a seamless and engaging
@@ -102,12 +102,12 @@
 <blockquote>
    I use <strong>Generative AI</strong> tools (like Grok, Gemini, Claude and ChatGPT) to optimize code, debug and
    generate creative
-   ideas for layouts and features. It’s like having a coding co-pilot! ✈️
+   ideas for layouts and features. It’s like having a coding co-pilot!
 </blockquote>
 
 <hr>
 
-<h2>🚀 Getting Started</h2>
+<h2>Getting Started</h2>
 
 <p>Want to run this portfolio locally on your machine? Follow these steps to set it up using <strong>XAMPP</strong>, a
    popular local server environment for PHP-based projects.</p>
@@ -121,7 +121,7 @@
          href="https://github.com/Kishan0405/Kishan-Personal-Portfolio/archive/refs/heads/main.zip">Click here to
          download the ZIP file</a>.</li>
    <li>A modern web browser (Chrome, Firefox etc.).</li>
-   <li>A passion for coding and creativity! 😄</li>
+   <li>A passion for coding and creativity!</li>
 </ul>
 
 
@@ -202,7 +202,7 @@
 
 <hr>
 
-<h2>🌟 Hosting the Website</h2>
+<h2>Hosting the Website</h2>
 
 <h3>Option 1: Local Hosting (XAMPP)</h3>
 <p>Follow the setup steps above to run it locally for testing or development.</p>
@@ -235,15 +235,15 @@
 
 <hr>
 
-<h2>🧑‍💻 Contributing</h2>
+<h2>Contributing</h2>
 
 <p>
    I’m a vibe-coder and always open to collaboration! If you have suggestions, ideas or want to work together:
 </p>
 
 <ul>
-   <li>📧 Simply reach out via email: <a href="mailto:kishanbantakal@gmail.com">kishanbantakal@gmail.com</a></li>
-   <li>🔧 You can also fork the repository and open a pull request if you have code improvements!</li>
+   <li>Simply reach out via email: <a href="mailto:kishanbantakal@gmail.com">kishanbantakal@gmail.com</a></li>
+   <li>You can also fork the repository and open a pull request if you have code improvements!</li>
 </ul>
 
 <hr>
@@ -306,3 +306,4 @@
 
 
 </hr>
+
